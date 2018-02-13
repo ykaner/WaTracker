@@ -1,3 +1,35 @@
+
+function createWindow(filename, outerBounds, callback) {
+	chrome.app.window.create(filename, {id: filename, outerBounds: outerBounds}, callback);
+}
+
+function reload_wa(){
+	view = document.getElementById('wa_webview');
+	view.reload();	
+}
+
+button_reload = document.getElementById('button_reload');
+button_reload.addEventListener('click', function(){
+	reload_wa();
+});
+
+button_menu = document.getElementById('button_menu');
+button_menu.addEventListener('click', function(){
+	createWindow('launcher.html', {'width': 700, 'height': 500});
+});
+
+buttom_online = document.getElementById('button_online');
+button_online.addEventListener('click', function(){
+	createWindow('online.html', { 'width': 900, 'height': 750 });
+});
+
+buttom_timeline = document.getElementById('button_timeline');
+button_timeline.addEventListener('click', function(){
+	createWindow('timeline.html', { 'width': 900, 'height': 750 });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function(event) {
 	let view = document.getElementById('wa_webview');
 
@@ -54,7 +86,7 @@ let port = null;
 window.onmessage = function(e) {
 	let message = e.data;
 	console.log('Guest message', message);
-	outputToLog(JSON.stringify(message));
+	//outputToLog(JSON.stringify(message));
 
 	switch (message.type) {
 		case 'wa_stream_start':

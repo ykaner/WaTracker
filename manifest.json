@@ -15,5 +15,13 @@
 		{"fileSystem": ["write", "retainEntries", "directory"]},
 		"power",
 		"storage"
-	]
+	],
+	/*"commands": {
+		"reload": {
+			"suggested_key" :{
+				"default": "Ctrl+R"
+			},
+			"description": "reload the WhatsApp"
+		}
+	}*/
 }

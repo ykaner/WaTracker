@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="record.css">
 	</head>
 	<body>
-		<h2 id="heading">Sign in to WhatsApp</h2>
-		<webview id="wa_webview" src="https://web.whatsapp.com/"></webview>
-
-		<h3>Log</h3>
-		<div id="div_log"></div>
+		<!--<h2 id="heading">Sign in to WhatsApp</h2>-->
+		<div class='root'>
+			<div class='btn-group'>
+				<button id='button_reload'>Reload</button>
+				<button id='button_menu'>Menu</button>
+				<button id='button_online'>Online users</button>
+				<button id='button_timeline'>Timeline</button>
+			</div>
+			<div class='webview'>
+				<webview id="wa_webview" src="https://web.whatsapp.com/"></webview>
+			</div>
+		</div>
+		
 		<script src="record.js"></script>
-		<script src="keyboardCommands.js"></script>
+
+		<!--<h3>Log</h3>
+		<div id="div_log"></div>
+		<script src="keyboardCommands.js"></script>-->
 	</body>
 </html>

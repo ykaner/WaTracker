@@ -1,6 +1,6 @@
 chrome.app.runtime.onLaunched.addListener(function() {
-	chrome.app.window.create('launcher.html', {
-		'id': 'window_launcher',
+	chrome.app.window.create('record.html', {
+		'id': 'record.html',
 		'outerBounds': {
 			'width': 700,
 			'height': 500
@@ -8,6 +8,15 @@ chrome.app.runtime.onLaunched.addListener(function() {
 	});
 });
 
+/*chrome.commands.onCommand.addListener(function(command){
+	record = chrome.app.window.get('record.html');
+	if (command === "reload"){
+		view = record.document.getElementById('wa_webview');
+		error.log(view);
+		view.reload();
+	}
+});
+*/
 let presencePort = null;
 
 chrome.runtime.onConnect.addListener(function(port) {
