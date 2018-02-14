@@ -5,7 +5,7 @@ function createWindow(filename, outerBounds, callback) {
 
 function reload_wa(){
 	view = document.getElementById('wa_webview');
-	view.reload();	
+	view.reload();
 }
 
 button_reload = document.getElementById('button_reload');
@@ -132,7 +132,7 @@ window.onmessage = function(e) {
 			break;
 	}
 
-	if (oldState != state) {
+	/*if (oldState != state) {
 		let text;
 
 		switch(state) {
@@ -148,7 +148,7 @@ window.onmessage = function(e) {
 		}
 
 		document.getElementById('heading').innerText = text;
-	}
+	}*/
 }
 
 chrome.power.requestKeepAwake('system');

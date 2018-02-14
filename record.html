@@ -2,15 +2,16 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="record.css">
+		<script src="thirdParty/jquery-3.3.1.min.js"></script>
 	</head>
 	<body>
 		<!--<h2 id="heading">Sign in to WhatsApp</h2>-->
 		<div class='root'>
 			<div class='btn-group'>
-				<button id='button_reload'>Reload</button>
-				<button id='button_menu'>Menu</button>
-				<button id='button_online'>Online users</button>
-				<button id='button_timeline'>Timeline</button>
+				<button id='button_reload' shortcut-key='r' ctrlKey='true'>Reload</button>
+				<button id='button_menu' shortcut-key='m'>Menu</button>
+				<button id='button_online' shortcut-key='o'>Online users</button>
+				<button id='button_timeline' shortcut-key='t'>Timeline</button>
 			</div>
 			<div class='webview'>
 				<webview id="wa_webview" src="https://web.whatsapp.com/"></webview>
@@ -20,7 +21,7 @@
 		<script src="record.js"></script>
 
 		<!--<h3>Log</h3>
-		<div id="div_log"></div>
-		<script src="keyboardCommands.js"></script>-->
+		<div id="div_log"></div>-->
+		<script src="wa_keyboardCommands.js"></script>
 	</body>
 </html>
